@@ -16,9 +16,4 @@ public class MyServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         resp.addDateHeader("Leha", System.currentTimeMillis());
     }
-
-    @Bean
-    public ServletRegistrationBean servletRegistrationBean(){
-        return new ServletRegistrationBean(new MyServlet(),"/MyServlet");
-    }
 }
